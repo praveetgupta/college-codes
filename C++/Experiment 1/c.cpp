@@ -33,11 +33,11 @@ int main()
 
     if (b1.price > b2.price)
     {
-        cout << "\n\nThe book having greater price is: "<<b1.book_name;
+        cout << "\n\nThe book having greater price is: " << b1.book_name;
     }
     else
     {
-        cout << "\n\nThe book having greater price is: "<<b2.book_name;
+        cout << "\n\nThe book having greater price is: " << b2.book_name;
     }
 
     return 0;
