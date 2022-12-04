@@ -1,32 +1,40 @@
-// Sort elements in descending order using Selection Sort
-
 #include <stdio.h>
+
 int main()
 {
-    int i, j, t, a[50], n;
-    printf("Enter the number of elements: ");
-    scanf("%d", &n);
-    printf("Enter the elements: ");
-    for (i = 0; i < n; i++)
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+    
+    int arr[size];
+    printf("\nEnter %d elements: ", size);
+    for(int i=0; i<size; i++)
     {
-        scanf("%d", &a[i]);
+        scanf("%d", &arr[i]);
     }
-    for (i = 0; i < 5; i++)
+    
+    // Selection Sort
+    for(int i=0; i<size-1; i++)
     {
-        for (j = i + 1; j < 5; j++)
+        int max_index = i;
+        for(int j=i+1; j<size; j++)
         {
-            if (a[i] < a[j])
+            if(arr[j] > arr[max_index])
             {
-                t = a[i];
-                a[i] = a[j];
-                a[j] = t;
+                max_index = j;
             }
         }
+        // Swap
+        int temp = arr[max_index];
+        arr[max_index] = arr[i];
+        arr[i] = temp;
     }
-    printf("Sorted elements: ");
-    for (i = 0; i < 5; i++)
+    
+    printf("\nSorted array in descending order: ");
+    for(int i=0; i<size; i++)
     {
-        printf(" %d", a[i]);
+        printf("%d ", arr[i]);
     }
+    printf("\n");
     return 0;
 }
