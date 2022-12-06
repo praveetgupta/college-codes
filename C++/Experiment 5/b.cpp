@@ -1,7 +1,7 @@
 // Write a program to declare a class “student” having data members as name and percentage. Write a constructor to initialize these data members. Accept and display data for one student
 
 #include <iostream>
-#include <conio.h>
+#include <stdlib.h>
 #include <cstring>
 using namespace std;
 class student
@@ -33,5 +33,5 @@ int main()
     student s1(n, p);
     s1.display();
     cout<<"Press any key to exit...";
-    getch();
+    return 0;
 }

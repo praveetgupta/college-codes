@@ -25,6 +25,6 @@ int main()
 {
     t.getdata();
     t.showdata();
-    cout<<"Total seconds: "<<t.totsec();
+    cout<<"Total seconds:"<<t.totsec()<<endl;
     return 0;
 }

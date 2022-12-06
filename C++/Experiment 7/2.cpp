@@ -22,7 +22,7 @@ public:
     void intSum()
     {
         cout << "Enter 10 integer values: ";
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 10; i++)
         {
             cin >> b[i];
             int_sum += b[i];

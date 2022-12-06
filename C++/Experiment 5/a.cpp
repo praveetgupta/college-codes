@@ -1,7 +1,7 @@
 // Write a program to find the sum of numbers between 1 to n using a constructor where the value of n will be passed to the constructor
 
 #include <iostream>
-#include <conio.h>
+#include <stdlib.h>
 using namespace std;
 class sum
 {
@@ -30,5 +30,5 @@ int main()
     sum s(x);
     s.display();
     cout<<"\n\nPress any key to exit...";
-    getch();
+    return 0;
 }

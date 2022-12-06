@@ -1,11 +1,9 @@
-// WAP to implement multilevel inheritance from the following figure. Accept and display data for one table.
-
+//virtual base class
 #include <iostream>
-#include <stdlib.h>
 using namespace std;
-class A
-{
-    int a;
+
+class A {
+	int a;
 
 public:
     void geta()
@@ -18,8 +16,8 @@ public:
         cout << "a=" << a;
     }
 };
-class B : public A
-{
+
+class B : public virtual A {
     int b;
 
 public:
@@ -33,8 +31,8 @@ public:
         cout << "b=" << b;
     }
 };
-class C : public B
-{
+
+class C : public virtual A {
     int c;
 
 public:
@@ -48,14 +46,32 @@ public:
         cout << "c=" << c;
     }
 };
+
+class D : public B, public C {
+    int d;
+
+public:
+    void getd()
+    {
+        cout << "Enter d:";
+        cin >> d;
+    }
+    void showd()
+    {
+        cout << "d=" << d;
+    }
+};
+
 int main()
 {
-    C c;
-    c.geta();
-    c.getb();
-    c.getc();
-    c.showa();
-    c.showb();
-    c.showc();
+    D d;
+    d.geta();
+    d.getb();
+    d.getc();
+    d.getd();
+    d.showa();
+    d.showb();
+    d.showc();
+    d.showd();
     return 0;
 }

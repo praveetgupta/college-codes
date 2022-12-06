@@ -1,7 +1,7 @@
 // WAP to find the greatest number among two numbers from two different classes using the friend function
 
 #include <iostream>
-#include <conio.h>
+#include <stdlib.h>
 using namespace std;
 
 class a;
@@ -60,8 +60,7 @@ int main()
     greatest(a1, b1);
     cout << "\n";
 
-    cout<<"\n\Press any key to exit...";
-    getch();
+    cout<<"\nPress any key to exit...";
 
     return 0;
 }

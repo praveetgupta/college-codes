@@ -1,7 +1,7 @@
 // WAP to create two classes result1 and result 2 which stores the marks of the students. Read the values of marks for both class objects and compute the average of two results
 
 #include <iostream>
-#include <conio.h>
+#include <stdlib.h>
 using namespace std;
 
 class result1;
