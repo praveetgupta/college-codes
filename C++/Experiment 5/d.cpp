@@ -31,3 +31,8 @@ int main() {
 
     return 0;
 }
+
+/*
+The 45 value is not used in the Number class' constructor with an argument, but it is still passed as an argument because the constructor is defined to take an int argument.
+This is an example of constructor overloading, where multiple constructors are defined in a class, each with a different set of parameters.
+*/
