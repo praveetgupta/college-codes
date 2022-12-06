@@ -1,30 +1,42 @@
-//Write a program to declare class “time”, accept time in HH:MM:SS format, convert it into total seconds and display them
+// Write a program to declare class “time”, accept time in HH:MM:SS format, convert it into total seconds and display them
+#include <iostream>
 
-#include<iostream>
 using namespace std;
 
-class time
+class Time
 {
+    int seconds;
     int hh, mm, ss;
-    public:
-        void getdata()
-        {
-            cout<<"Enter time in HH:MM:SS format: ";
-            cin>>hh>>mm>>ss;
-        }
-        void showdata()
-        {
-            cout<<"\n\nTime in HH:MM:SS format: "<<hh<<":"<<mm<<":"<<ss<<endl;
-        }
-        int totsec()
-        {
-            return hh*3600+mm*60+ss;
-        }
-} t;
+
+public:
+    void getData()
+    {
+        cout << "Enter time" << endl;
+        cout << "Hours: ";
+        cin >> hh;
+        cout << "Minutes: ";
+        cin >> mm;
+        cout << "Seconds: ";
+        cin >> ss;
+    }
+    void conversion()
+    {
+        seconds = hh * 3600 + mm * 60 + ss;
+    }
+    void showData()
+    {
+        cout << "\nThe time is = " << hh << ":" << mm << ":" << ss << endl;
+        cout << "Time in total seconds: " << seconds;
+    }
+};
+
 int main()
 {
-    t.getdata();
-    t.showdata();
-    cout<<"Total seconds:"<<t.totsec()<<endl;
+    Time T; // creating objects
+
+    T.getData();
+    T.conversion();
+    T.showData();
+
     return 0;
 }
