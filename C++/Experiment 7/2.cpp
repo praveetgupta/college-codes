@@ -2,38 +2,39 @@
 
 #include <iostream>
 using namespace std;
-class calculate
+float arr1[5];
+int arr2[10];
+void add(float arr1[5])
 {
-public:
-    float a[5];
-    int b[10];
-    float float_sum;
-    int int_sum=0;
-    void floatSum()
+    float sum = 0;
+    for (int i = 0; i < 5; i++)
     {
-        cout << "Enter 5 float values: ";
-        for (int i = 0; i < 5; i++)
-        {
-            cin >> a[i];
-            float_sum += a[i];
-        }
-        cout << "Sum of 5 float values is " << float_sum << endl;
+        sum += arr1[i];
     }
-    void intSum()
+    cout << "Sum of 5 float values is " << sum << endl;
+}
+void add(int arr2[10])
+{
+    int sum = 0;
+    for (int i = 0; i < 10; i++)
     {
-        cout << "Enter 10 integer values: ";
-        for (int i = 0; i < 10; i++)
-        {
-            cin >> b[i];
-            int_sum += b[i];
-        }
-        cout << "Sum of 10 integer values is " << int_sum << endl;
+        sum += arr2[i];
     }
-};
+    cout << "Sum of 10 integer values is " << sum << endl;
+}
 int main()
 {
-    calculate c;
-    c.floatSum();
-    c.intSum();
+    cout << "Enter 5 float values" << endl;
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> arr1[i];
+    }
+    add(arr1);
+    cout << "\nEnter 10 integer values" << endl;
+    for (int i = 0; i < 10; i++)
+    {
+        cin >> arr2[i];
+    }
+    add(arr2);
     return 0;
 }
