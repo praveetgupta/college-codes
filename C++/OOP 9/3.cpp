@@ -7,7 +7,7 @@ int main()
      char ch;
      ofstream a;
      a.open("9.3.txt");
-     a << "my name is praveet";
+     a << "the name's bond, james bond";
      a.close();
      int w = +1;
      ifstream b;

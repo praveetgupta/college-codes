@@ -7,7 +7,7 @@ int main()
      char ch;
      ofstream a;
      a.open("9.2.txt");
-     a << "hello how are you";
+     a << "whats up 123 456 789";
      a.close();
      int s = 0, d = 0;
      ifstream b;
@@ -17,9 +17,10 @@ int main()
           b.get(ch);
           if (ch == ' ')
                s++;
-          else
+          else if(ch >= '0' && ch <= '9')
                d++;
      }
+     d=d-1;
      cout << "Number of digits are: " << d << endl;
      cout << "Number of spaces are: " << s << endl;
 }
