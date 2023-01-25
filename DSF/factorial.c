@@ -1,14 +1,16 @@
-//write a program to find the factorial of a number
-#include <stdio.h>
+//write a program to find the factorial of a number using pointer
+#include<stdio.h>
 int main()
 {
-    int i, n, fact = 1;
+    int n, i, fact = 1;
+    int *ptr;
     printf("Enter the number:");
     scanf("%d", &n);
-    for (i = 1; i <= n; i++)
+    ptr = &n;
+    for (i = 1; i <= *ptr; i++)
     {
         fact = fact * i;
     }
-    printf("Factorial of %d is %d", n, fact);
+    printf("Factorial of %d is %d", *ptr, fact);
     return 0;
 }
