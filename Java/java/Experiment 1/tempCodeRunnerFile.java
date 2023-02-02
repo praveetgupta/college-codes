@@ -1,4 +1,3 @@
-//fibonaaci series
 import java.io.*;
 import java.util.*;
 public class fibonacci {
