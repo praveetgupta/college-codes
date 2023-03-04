@@ -13,7 +13,6 @@ class Employee {
         name = sc.next();
         System.out.print("Enter employee salary: ");
         salary = sc.nextDouble();
-        sc.close();
     }
     
     void display() {
@@ -23,10 +22,11 @@ class Employee {
     }
 }
 
-public class employee {
+public class employeeCCA {
     public static void main(String[] args) {
         Employee emp1 = new Employee();
         Employee emp2 = new Employee();
+        Scanner sc = new Scanner(System.in);
         
         System.out.println("Enter details for employee 1:");
         emp1.accept();
@@ -39,5 +39,7 @@ public class employee {
         
         System.out.println("Employee 2 details:");
         emp2.display();
+        
+        sc.close();
     }
 }
