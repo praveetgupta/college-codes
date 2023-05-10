@@ -13,10 +13,10 @@ public class JTableExample {
         // create a DefaultTableModel with some data
         String[] columnNames = {"Name", "Age", "Gender"};
         Object[][] data = {
-                {"Alice", 25, "Female"},
-                {"Bob", 32, "Male"},
-                {"Charlie", 19, "Male"},
-                {"Diana", 47, "Female"}
+                {"Sarthak", 18, "Male"},
+                {"Shrushti", 28, "Female"},
+                {"Praveet", 17, "Male"},
+                {"Godwin", 28, "Male"}
         };
         DefaultTableModel model = new DefaultTableModel(data, columnNames);
 
@@ -34,7 +34,7 @@ public class JTableExample {
         frame.add(panel);
 
         // set the size of the JFrame and show it
-        frame.setSize(400, 300);
+        frame.setSize(500, 150);
         frame.setVisible(true);
     }
 }
