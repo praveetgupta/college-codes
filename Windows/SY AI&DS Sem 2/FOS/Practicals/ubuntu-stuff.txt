@@ -1,0 +1,72 @@
+Implement all basic commands of Linux OS
+a) Commands to display text messages on screen (echo).
+b) Files commands -Create, delete, copy, and move files.
+c) Directory - Create, delete, copy, and move directories.
+d) Input-output redirection commands.
+e) Commands to archive or zip, compress and unpack files.
+ANS: 
+a) Commands to display text messages on the screen (echo):
+echo "Hello, World!" : Displays "Hello, World!" on the screen.
+b) File commands:
+Create a file: touch filename.txt
+Delete a file: rm filename.txt
+Copy a file: cp sourcefile.txt destinationfile.txt
+Move a file: mv sourcefile.txt destination/file.txt
+c) Directory commands:
+Create a directory: mkdir directoryname
+Delete a directory: rmdir directoryname (only works if the directory is empty)
+Copy a directory: cp -r sourcedirectory/ destinationdirectory/
+Move a directory: mv sourcedirectory/ destination/
+d) Input-output redirection commands:
+Redirect output to a file: command > output.txt
+Append output to a file: command >> output.txt
+Redirect input from a file: command < input.txt
+e) Archive or compression commands:
+Create a zip archive: zip archive.zip file1.txt file2.txt
+Extract files from a zip archive: unzip archive.zip
+Implement following shell scripts
+a) Creation and execution of shell script to display simple “Hello world”.
+b) Write a shell script to read a number and find whether the number is odd or even
+(Using if. else). and accept number from the user.
+ANS:
+a) Creation and execution of shell script to display simple "Hello world":
+1. Create a file named hello.sh using terminal. (cat >> hello.sh)
+2. Add the following lines:
+#!/bin/bash
+echo "Hello, world!"
+1. Save and close the file.
+FOS Practical Programs 2
+2. Make the script executable by running the command: chmod +x hello.sh
+3. Execute the script by running: ./hello.sh
+The output will be:
+Hello, world!
+b) Write a shell script to read a number and find whether the number is odd or even (using if-else) and accept the
+number from the user:
+1. Create a file named evenodd.sh using terminal. (cat >> evenodd.sh)
+2. Add the following lines:
+#!/bin/bash
+echo "Enter a number: "
+read number
+if ((number % 2 == 0)); then
+echo "$number is even."
+else
+echo "$number is odd."
+fi
+1. Save and close the file.
+2. Make the script executable by running the command: chmod +x evenodd.sh
+3. Execute the script by running: ./evenodd.sh
+3. Write a shell script to accept two numbers from the user and add them.
+ANS:
+To write a shell script that accepts two numbers from the user and adds them, you can follow these steps:
+1. Create a file named add_numbers.sh using terminal. (cat >> add_numbers.sh)
+2. Add the following lines:
+#!/bin/bash
+echo "Enter the first number: "
+read num1
+echo "Enter the second number: "
+read num2
+sum=$((num1 + num2))
+echo "The sum of $num1 and $num2 is: $sum"
+1. Save and close the file.
+2. Make the script executable by running the command: chmod +x add_numbers.sh
+3. Execute the script by running: ./add_numbers.sh

@@ -1,0 +1,36 @@
+Study of Banker’s algorithm
+ANS:
+The Banker's algorithm is a resource allocation and deadlock avoidance algorithm used in operating systems. It is
+designed to ensure that resources are allocated to processes in a safe and deadlock-free manner. The algorithm is
+primarily used in multi-process and multi-resource systems to avoid the deadlock state, where processes are unable
+to proceed due to resource allocation conflicts.
+Here's an overview of how the Banker's algorithm works:
+
+1. Available Resources: The system keeps track of the total number of available resources of each type. These
+resources can include memory, I/O devices, or other system resources.
+
+2. Maximum Resource Requirement: Each process specifies its maximum resource requirement, i.e., the maximum
+number of resources of each type it may need to complete its execution.
+
+3. Currently Allocated Resources: The system keeps track of the currently allocated resources for each process.
+
+4. Need Matrix: The system calculates the need matrix, which represents the remaining resources that each process
+requires to complete its execution.
+
+5. Safety Check: The Banker's algorithm performs a safety check to determine if a particular allocation of resources
+to a process will result in a safe state or lead to a deadlock. The safety check ensures that the requested
+resources can be allocated to a process without causing a deadlock, taking into account the available resources,
+currently allocated resources, and the needs of other processes.
+
+6. Resource Allocation: If the safety check passes, the requested resources are allocated to the process. If not, the
+process must wait until the requested resources become available.
+
+The Banker's algorithm guarantees that resource allocation will not result in a deadlock if the system is in a safe state.
+It prevents the allocation of resources that may lead to a deadlock by checking for safety before making any allocation
+decisions.
+By maintaining information about the available resources, maximum resource requirements, and currently allocated
+resources, the Banker's algorithm helps ensure that resources are allocated in a way that avoids deadlock and
+maximizes system utilization.
+It's important to note that the Banker's algorithm assumes that processes must declare their maximum resource
+requirements upfront, which may not be feasible in all scenarios. Additionally, it requires the system to have complete
+information about resource allocation and resource requirements, which may not always be available.
