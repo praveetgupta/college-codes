@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+<body>
+    <h2>Armstrong numbers between 1 and 500:</h2>
+    <script>
+        for (let i = 1; i <= 500; i++) {
+            let nDigits = i.toString().length;
+            let sum = 0, temp = i
+            while(temp > 0) {
+                let rem = temp % 10
+                sum += rem ** nDigits;
+                temp = parseInt(temp/10)
+            }
+            if ( sum == i) {
+                document.write(`${i}<br>`)
+            }
+        }
+    </script>
+</body>
+</html>
