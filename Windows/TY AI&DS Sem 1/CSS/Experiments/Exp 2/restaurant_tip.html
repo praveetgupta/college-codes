@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Restaurant Tip</title>
+</head>
+
+<body>
+    <script>
+        let totalBill = parseInt(prompt('Enter the total bill in numbers: '))
+        function calculateTip(totalBill) {
+            let tip = (totalBill * (20 / 100))
+            document.write(`The tip to be paid is: ${tip}`)
+        }
+        calculateTip(totalBill)
+    </script>
+</body>
+</html>

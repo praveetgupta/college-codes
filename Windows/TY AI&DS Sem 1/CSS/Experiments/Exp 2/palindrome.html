@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Palindrome</title>
+</head>
+<body>
+    <script>
+        let str=prompt("Enter a String")
+        function palindrome(str)
+        {
+            let reverse=str.split("").reverse().join("")
+            if(str===reverse)
+            {
+                document.write(str+" is a Palindrome String !!!")
+            }
+            else{
+                document.write(str+" is not a Palindrome String !!!")
+            }
+        }
+
+        palindrome(str);
+        
+    </script>
+</body>
+</html>
