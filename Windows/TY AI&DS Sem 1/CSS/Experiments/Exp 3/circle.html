@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 3 - Question 1</title>
+</head>
+<body>
+  <script>
+    const radius = parseFloat(prompt("Enter the radius of the circle:"));
+
+    if (!isNaN(radius) && radius >= 0) {
+      function Circle(radius) {
+        this.radius = radius;
+        this.circumference = 2 * Math.PI * this.radius; 
+      }
+      const circle = new Circle(radius);
+
+      document.write(`Circumference of the circle with radius ${radius}: ${circle.circumference}`);
+    } else {
+      document.write("Invalid input. Please enter a valid non-negative number for the radius.");
+    }
+  </script>
+</body>
+</html>

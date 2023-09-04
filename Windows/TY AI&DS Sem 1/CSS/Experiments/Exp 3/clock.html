@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiment 3 - Question 2</title>
+  </head>
+  <body>
+    <script>
+      function Clock() {
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
+        this.setTime = function (hours, minutes, seconds) {
+          this.hours = hours;
+          this.minutes = minutes;
+          this.seconds = seconds;
+        };
+
+        this.displayTime = function (format) {
+          if (format === "Military") {
+            document.write(
+              `<h3>Military Time: ${this.hours}${this.minutes}${this.seconds}<h3>`
+            );
+          } else if (format === "AM/PM") {
+            let am_pm = "AM";
+            let displayHours = this.hours;
+
+            if (this.hours >= 12) {
+              am_pm = "PM";
+              if (this.hours > 12) {
+                displayHours = this.hours - 12;
+              }
+            }
+
+            document.write(
+              `<h3>Time: ${displayHours}:${this.minutes}:${this.seconds} ${am_pm}<h3>`
+            );
+          } else {
+            document.write("<h3>Invalid time format</h3>");
+          }
+        };
+      }
+
+      const clock = new Clock();
+      const hours = parseInt(prompt("Enter hours (0-23):"));
+      const minutes = parseInt(prompt("Enter minutes (0-59):"));
+      const seconds = parseInt(prompt("Enter seconds (0-59):"));
+
+      const formatChoice = prompt("Enter time format: Military/AM/PM");
+
+      clock.setTime(hours, minutes, seconds);
+      clock.displayTime(formatChoice);
+    </script>
+  </body>
+</html>

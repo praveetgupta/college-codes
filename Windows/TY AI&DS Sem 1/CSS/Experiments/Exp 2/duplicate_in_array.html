@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Duplicate values in array.</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        var arr=[11,1,5,2,3,2,7,1,10];
-        let arr1=arr.filter((currentValue,currentIndex)=>arr.indexOf(currentValue)!==currentIndex);
-        document.write("Orignal Array : "+arr+"<br>")
-        document.write("Duplicated Array : "+arr1+"<br>")
+      let array = [1, 2, 3, 2, 4, 3, 5, 6, 1, 7, 1];
+      let duplicatesCount = {};
+
+      for (let i = 0; i < array.length; i++) {
+        if (duplicatesCount[array[i]] === undefined) {
+          duplicatesCount[array[i]] = 1;
+        } else {
+          duplicatesCount[array[i]]++;
+        }
+      }
+
+      document.write("Duplicate Count: <br>");
+      for (let value in duplicatesCount) {
+        document.write(`${value}: ${duplicatesCount[value]}<br>`);
+      }
     </script>
-</body>
+  </body>
 </html>
