@@ -1,5 +1,3 @@
-DONT USE THIS CODE
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.JFrame;
@@ -45,7 +43,7 @@ public class CustomMouseDemo extends JFrame implements MouseListener, MouseMotio
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        
+
     }
 
     public static void main(String[] args) {
