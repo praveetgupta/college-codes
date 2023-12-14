@@ -1,0 +1,38 @@
+<!-- Write a function that will create a clock object. It will have three
+properties: seconds, minutes, and hours. Write two methods: setTime()
+to set the current time and displayTime() to display the time. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+</head>
+<body>
+<script>
+function createClock()
+{
+return {
+seconds: 0,
+minutes:0,
+hours:0,
+setime:function(hours,minutes,seconds)
+{
+this.hours=hours;
+this.minutes=minutes;
+this.seconds=seconds;
+},
+displaytime: function(){
+document.write (`The current time is${this.hours}:${this.minutes}:${this.seconds}`);
+}
+
+};
+}
+const myclock=createClock();
+const a=parseInt(prompt("Enter hours: "))
+const b=parseInt(prompt("Enter min: "))
+const c=parseInt(prompt("Enter sec: "))
+myclock.setime(a,b,c);
+myclock.displaytime()
+</script>
+</body>
+</html>
+Create

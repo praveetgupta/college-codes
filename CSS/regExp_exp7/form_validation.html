@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+<script>
+function validateForm() {
+let usernameValue=document.querySelector('#username').value;
+var reg = /[a-zA-Z0-9_]{3,16}/;
+if (reg.test(usernameValue)) {
+alert("Valid username: " + usernameValue);
+} else {
+alert("Invalid username: " + usernameValue);
+}
+}
+</script>
+</head>
+<body>
+<h1>Form Validation</h1>
+<form onsubmit="validateForm()">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username">
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>

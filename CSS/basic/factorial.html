@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+let factorial=1;
+let num=parseInt(prompt("Enter a number: "))
+for(i=2;i<=num;i++)
+{
+factorial=factorial*i
+}
+document.write(`The factorial is:${factorial}`)
+</script>
+</body>
+</html>
+
+<!-- find factorial using recursive function -->
+<!-- !DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+let num=parseInt(prompt("Enter a number: "))
+function factorial(num)
+{
+if(num===0||num===1)
+{
+return 1;
+}
+else{
+return num*factorial(num-1)
+}
+}
+document.write(`The factorial is:
+${factorial(num)}`)
+</script>
+</body>
+</html> -->

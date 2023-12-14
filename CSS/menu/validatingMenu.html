@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating Menu</title>
+</head>
+<body>
+    <center>
+        <form onsubmit="redirectUser(); return false;">
+            <label for="siteSelect">Select a site:</label>
+            <select id="siteSelect">
+                <option value="" selected>Select a site</option>
+                <option value="https://www.google.com">Google</option>
+                <option value="https://www.yahoo.com">Yahoo</option>
+                <option value="https://www.reddit.com">Reddit</option>
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+
+    <script>
+        function redirectUser() {
+            // Get the selected option value
+            var selectedSite = document.getElementById("siteSelect").value;
+
+            // Redirect the user to the selected site
+            if (selectedSite) {
+                window.location.href = selectedSite;
+            }
+            else{
+                alert("Please Select a site")
+            }
+        }
+    </script>
+</body>
+</html>

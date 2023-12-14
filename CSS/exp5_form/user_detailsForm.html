@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Form</title>
+</head>
+<body>
+
+    <h2>User Details Form</h2>
+    <form onsubmit="submitForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" required></textarea><br>
+        <label>Subject:</label><br>
+        <input type="radio" id="maths" name="subject" value="maths" required>
+        <label for="maths">Maths</label><br>
+        <input type="radio" id="eng" name="subject" value="English" required>
+        <label for="eng">English</label><br>
+        <input type="radio" id="hindi" name="subject" value="Hindi" required>
+        <label for="hindi">Hindi</label><br>
+        <label for="favoriteAuthor">Favorite Author:</label>
+        <select id="favoriteAuthor" name="favoriteAuthor" required>
+            <option value=""selected disabled>Choose Author</option>
+            <option value="R.D Sharma">R.D Sharma</option>
+            <option value="Donald Norman">Donald Norman</option>
+            <option value="Pragya Agarwal">Pragya Agarwal</option>
+            <option value="William Dalrymple">William Dalrymple</option>
+        </select><br>
+        <label for="comments">Comments on the Last Book Read:</label><br>
+        <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            let name = document.querySelector('#name').value;
+            let address = document.querySelector('#address').value;
+            let subject = document.querySelector('input[name="subject"]:checked').value;
+            let favoriteAuthor = document.querySelector('#favoriteAuthor').value;
+            let comments = document.querySelector('#comments').value;
+            alert(`User Details: \n\nName: ${name}\nAddress: ${address}\nSubject: ${subject}\nFavorite Author: ${favoriteAuthor}\nComments: ${comments}`);
+        }
+    </script>
+
+</body>
+</html>

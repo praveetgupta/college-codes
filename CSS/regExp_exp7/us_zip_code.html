@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>US Zip Code Validation</title>
+<script>
+    function validateZipCode()
+    {
+    var str = document.getElementById("zip").value;
+    let reg = /^\d{5}(?:[-\s]\d{4})?$/;
+    if(reg.test(str))
+    {
+    alert("Valid US Zip Code !!!")
+    }
+    else{
+    alert("Invalid US Zip Code !!!")
+    }
+    }
+    </script>
+</head>
+<body>
+
+<h1>US Zip Code Validation</h1>
+<label for="zip">Zip Code:</label>
+<input type="text" id="zip" name="zip" placeholder="XXXXX or XXXXX-XXXX" required>
+<button onclick="validateZipCode()">Validate Zip Code</button>
+</body>
+</html>

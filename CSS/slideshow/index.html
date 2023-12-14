@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+</head>
+<body>
+    <script>
+        let sliderImgs=["./img/banana.jpg","./img/orange.jpg","./img/mango.jpg"]
+        let count=0;
+        
+        function previousImg() {
+            count=(count-1+sliderImgs.length)%sliderImgs.length;
+            document.querySelector("#img");
+            img.src=sliderImgs[count];
+        }
+        function nextImg() {
+            count=(count+1)%sliderImgs.length;
+            document.querySelector("#img");
+            img.src=sliderImgs[count];
+        }
+    </script>
+
+    <img src="./img/banana.jpg" id="img" height="400px" width="400px"><br>
+    <button onclick="previousImg()">Previous Image</button>
+    <button onclick="nextImg()">Next Image</button>
+</body>
+</html>

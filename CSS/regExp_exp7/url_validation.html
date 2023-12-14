@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Practice</title>
+</head>
+<body>
+<script>
+function validateURL(str)
+{
+let regExp= /^(http|https):\/\/[^ "]+$/;
+if(regExp.test(str))
+{
+alert("Valid URL !!!")
+}
+else{
+alert("Invalid URL !!!")
+}
+}
+let str=prompt("Enter an URL string: ");
+validateURL(str)
+</script>
+</body>
+</html>

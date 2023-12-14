@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Options</title>
+  <script>
+    function updateOptions() {
+      let selectedCategory = document.querySelector("#category").value; 
+      let items = document.querySelector("#items");
+      items.innerHTML = "";// Clear existing options
+      // Add new options based on the selected category
+      if (selectedCategory === "fruit") {
+        let fruitOptions = ["Apple", "Banana", "Orange"];
+        addOptions(items, fruitOptions);
+      } else if (selectedCategory === "flower") {
+        let flowerOptions = ["Rose", "Lily", "Tulip"];
+        addOptions(items, flowerOptions);
+      } else if (selectedCategory === "color") {
+        let colorOptions = ["Red", "Blue", "Green"];
+        addOptions(items, colorOptions);
+      }
+    }
+
+    // Function to add options to a select element
+    function addOptions(itemList, optionsArray) {
+      for (let i = 0; i < optionsArray.length; i++) {
+        let option = document.createElement("option");
+        option.value = optionsArray[i];
+        option.text = optionsArray[i];
+        itemList.add(option);
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Select a category:</h2>
+  <select id="category" onchange="updateOptions()">
+    <option value="fruit">Fruit</option>
+    <option value="flower">Flower</option>
+    <option value="color">Color</option>
+  </select>
+
+  <h2>Select an item:</h2>
+  <select id="items">
+    <option value="" selected disabled>Select Category first</option>
+  </select>
+
+</body>
+</html>

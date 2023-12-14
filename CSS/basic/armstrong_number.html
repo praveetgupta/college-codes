@@ -1,0 +1,58 @@
+<!-- Program to print Armstrong numbers from 1-500 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+for (let i = 0; i <= 500; i++) {
+let sum = 0;
+let len = i.toString().length;
+let temp = i;
+let num=i;
+while (num > 0) {
+let remainder = num % 10;
+sum = sum + Math.pow(remainder, len)
+num = Math.floor(num/ 10)
+}
+if (sum === temp) {
+document.write(`${temp} is a Armstrong
+number<br>`)
+}
+}
+</script>
+</body>
+</html>
+
+<!-- Program to check whether a number is armstrong or not -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+</head>
+<body>
+<script>
+let num=parseInt(prompt("Enter a number: "));
+let sum=0;
+let len=num.toString().length
+let temp=num;
+while(num>0)
+{
+let remainder=num%10
+sum=sum+Math.pow(remainder,len);
+num=Math.floor(num/10)
+}
+if(sum==temp)
+{
+document.write("It is a Armstrong")
+}
+else{
+document.write("It is not")
+}
+</script>
+</body>
+</html> -->

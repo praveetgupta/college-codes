@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celsius to Fahrenheit Conversion</title>
+</head>
+<body>
+
+  <h2>Celsius to Fahrenheit Conversion Table (10 to 100)</h2>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Celsius</th>
+        <th>Fahrenheit</th>
+      </tr>
+    </thead>
+    <tbody id="conversionTableBody"></tbody>
+  </table>
+
+  <script>
+    function celsiusToFahrenheit(celsius) {
+      return (celsius * 9 / 5) + 32;
+    }
+
+    var tableBody = document.getElementById("conversionTableBody");
+    var tableHTML = '';
+
+    for (var celsius = 10; celsius <= 100; celsius += 10) {
+      var fahrenheit = celsiusToFahrenheit(celsius);
+
+      tableHTML += '<tr>';
+      tableHTML += '<td>' + celsius + '°C</td>';
+      tableHTML += '<td>' + fahrenheit.toFixed(2) + '°F</td>';
+      tableHTML += '</tr>';
+    }
+
+    tableBody.innerHTML = tableHTML;
+  </script>
+
+</body>
+</html>

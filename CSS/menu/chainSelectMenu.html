@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let branchObj={
+            "Computer Engeenering":{
+                "First Shift":["FYCO-I","SYCO-I","TYCO-I"],
+                "Secound Shift":["FYCO-II","SYCO-II","TYCO-II"],
+            },
+            "Mechanical Engeenering":{
+                "First Shift":["FYME-I","SYME-I","TYME-I"],
+                "Secound Shift":["FYME-II","SYME-II","TYME-II"],
+            },
+        }
+        window.onload=function()
+        {
+            let branchSel=document.querySelector("#branch");
+            let shiftSel=document.querySelector("#shift");
+            let classSel=document.querySelector("#class");
+            for (let x in branchObj) {
+              branchSel[branchSel.options.length]=new Option(x,x);
+            }
+            branchSel.onchange=function () {
+                shiftSel.length=1;
+                classSel.length=1;
+                for (let y in branchObj[this.value]) {
+                   shiftSel[shiftSel.options.length]=new Option(y,y);
+                }
+            }
+            shiftSel.onchange= function () {
+                classSel.length=1;
+                let z=branchObj[branchSel.value][this.value]
+                for(i=0;i<z.length;i++)
+                {
+                    classSel[classSel.options.length]=new Option(z[i],z[i]);
+                }
+                }
+        }
+    </script>
+    <label for="branch">Select Your Branch: </label>
+    <select name="branch" id="branch">
+        <option value=""selected disabled>Select Your Branch</option>
+    </select>
+    <label for="shift">Select Your Shift: </label>
+    <select name="shift" id="shift">
+        <option value=""selected disabled>Select Your Branch First</option>
+    </select>
+    <label for="class">Select Your Class: </label>
+    <select name="class" id="class">
+        <option value=""selected disabled>Select Your Shift First</option>
+    </select>
+</body>
+</html>

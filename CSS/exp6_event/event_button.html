@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event_button</title>
+</head>
+<body>
+    <button onclick="display('Movies')">Shoot Movies</button>
+    <button onclick="display('BasketBall')">Shoot Basketball</button>
+    <button onclick="display('Guns')">Shoot Guns</button>
+    <script>
+        function display(action) {
+            switch (action) {
+                case "Movies":
+                    alert("Shooting Movies")
+                    break;
+                case "BasketBall":
+                    alert("Shooting BasketBall")
+                    break;
+                case "Guns":
+                    alert("Shooting Guns")
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

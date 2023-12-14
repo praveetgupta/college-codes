@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Social Security Number Validation</title>
+<script>
+    function validateSSN()
+    {
+    let str = document.getElementById("ssn").value;
+    let regExp= /^\d{3}-\d{2}-\d{4}$/;
+    if(regExp.test(str))
+    {
+    alert("Valid Social Security Number !!!")
+    }
+    else{
+    alert("Invalid Social Security Number !!!")
+    }
+    }
+</script>
+</head>
+<body>
+<h1>Social Security Number Validation</h1>
+<label for="ssn">Social Security Number:</label>
+<input type="text" id="ssn" name="ssn" placeholder="XXX-XX-XXXX" required>
+<button onclick="validateSSN()">Validate Social Security Number</button>
+</body>
+</html>

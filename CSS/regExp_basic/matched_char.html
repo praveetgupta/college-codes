@@ -1,0 +1,19 @@
+<!-- Write a program to find all matched word character from a string -->
+<!-- if asked non matched word characters then Change [a-z]to [^a-z] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Practice</title>
+</head>
+<body>
+<script>
+function words(str)
+{
+let reg=/[a-z]/g;
+document.write(`Matched words: ${str.match(reg)}`);
+}
+let str=prompt("Enter input: ")
+words(str)
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+</head>
+<body>
+<script>
+let arr = [];
+for(let i=0; i<5; i++) {
+	arr[i] = parseInt(prompt("Enter Element: "));
+}
+document.write(`Original array:
+${arr}<br><br>`)
+arr.unshift(1,2)
+document.write(`After using unshift:
+${arr}<br>`)
+arr.push(8,9,10)
+document.write(`After using Push: ${arr}<br>`)
+arr.pop()
+document.write(`After using Pop: ${arr}<br>`)
+arr.shift()
+document.write(`After using Shift: ${arr}<br>`)
+let a=arr.join('-')
+document.write(`Using join method :${a}<br><br>`)
+let arr1=['hello','bye','tata'];
+document.write(`2nd array : ${arr1}<br><br>`)
+document.write(`Sorting in ascending order:${arr1.sort()}<br>`)
+document.write(`Sorting in descending order:${arr1.sort().reverse()}<br><br>`)
+document.write(`Using concat:${arr1.concat(arr)}`)
+</script>
+</body>
+</html>
