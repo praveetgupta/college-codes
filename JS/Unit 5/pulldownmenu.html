@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <label for="siteSelect">Select site:</label>
+      <select id="siteSelect" onchange="redirectUser()">
+        <option value="" disabled selected>Select a site</option>
+        <option value="https://www.google.com">Google</option>
+        <option value="https://www.reddit.com">Reddit</option>
+        <option value="https://www.yahoo.com">Yahoo</option>
+      </select>
+    </center>
+    <script>
+      function redirectUser() {
+        var selectedSite = document.getElementById("siteSelect").value;
+        if (selectedSite) {
+          window.location.href = selectedSite;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="func"></p>
+    <script>
+        function student(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        const s1 = new student("praveet",18);
+        const s2 = new student("ram",500);
+        document.getElementById("func").innerHTML=s1.name + s2.name;
+    </script>
+</body>
+</html>

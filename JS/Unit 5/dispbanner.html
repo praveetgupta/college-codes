@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="display()">
+    <a href=""><img src="1.png" name="img" width="400" height="400"></a>
+    <script>
+        let bannerImgs = ["1.png","2.png"];
+        let count = 0;
+        function display(){
+            if(document.images){
+                count++;
+                if(count==bannerImgs.length){
+                    count=0;
+                }
+                document.img.src=bannerImgs[count];
+                setTimeout(display,2000);
+            }
+        }
+    </script>
+</body>
+</html>

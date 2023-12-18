@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {name:"praveet",age:18,
+        get getName(){
+            return this.name;
+        },
+        set setName(name){
+            this.name=name;
+        }};
+        document.write(obj.getName());
+        obj.setName="ram";
+        document.write(obj.getName());
+    </script>
+</body>
+</html>

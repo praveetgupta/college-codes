@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {name: "praveet",age:18};
+        Object.defineProperties(obj,{
+            name:{value:"praveet", writable:false}
+        });
+        let descriptor = Object.getOwnPropertyDescriptor(obj,"name");
+        document.write(JSON.stringify(descriptor,null,2)); 
+    </script>
+</body>
+</html>

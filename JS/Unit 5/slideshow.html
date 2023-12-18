@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var images = ["1.png","2.png"];
+        var count = 0;
+        function prevImg(){
+            if(count!=0){
+                count--;
+                var id = document.getElementById("imageId");
+                id.src = "images/" + images[count];
+            }
+        }
+        function nextImg(){
+            if(count!=3){
+                count++;
+                var id = document.getElementById("imageId");
+                id.src = "images/" + images[count];
+            }
+        }
+    </script>
+</head>
+<body>
+    <centre>
+        <img id="imageId" src="images/1.png" width="300" height="300"/>
+        <button onclick="prevImg()">< Prev Image</button>
+        <button onclick="nextImg()">Next Image ></button>
+    </centre>
+</body>
+</html>

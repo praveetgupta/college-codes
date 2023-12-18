@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                const sum = 4+5;
+                resolve(sum);
+            },2000);
+        });
+        promise.then(function(result){
+            document.write("Resolved: "+result);
+        });
+    </script>
+</body>
+</html>
